@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+h1{
+  padding: 1rem;
+}
+label{
+  display: block;
+  padding: 1rem;
+  font-weight: bolder;
+}
+#calculate-btn{
+  padding: 0.6rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  background-color: #87cefa;
+  color: black;
+  font-weight: bolder;
+  font-size: 16px;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+input{
+  padding: 1rem;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  font-size: 16px;
+  border: 2px solid #4682b4;
+  border-radius: 0.3rem;
+}
+#profit-output{
+  padding: 2rem;
+  font-size: 20px;
+  border: 2px solid #2e8b57;
+  max-width: 400px;
+  margin: auto;
+  color: #2e8b57;
+}
+#loss-output{
+  padding: 2rem;
+  font-size: 20px;
+  border: 2px solid #ff6347;
+  max-width: 400px;
+  margin: auto;
+  color: #ff6347;
+}
+#square-output{
+  padding: 2rem;
+  font-size: 20px;
+  border: 2px solid #778899;
+  max-width: 400px;
+  margin: auto;
+  color: #778899;
+}
+#error-output{
+  font-size: 20px;
+  max-width: 400px;
+  margin: auto;
+  color: #dc143c;
+}
