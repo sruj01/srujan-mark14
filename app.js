@@ -14,14 +14,21 @@ errorOutput.style.display = "none";
 
 
 function calculateProfitOrLoss(initial, qty, current){
-  if(initialPrice.value && stockQty.value && currentPrice.value){
+  if(initialPrice.value < 0 || stockQty.value < 0 || currentPrice.value < 0){
+    errorOutput.style.display = "block";
+    profitOutput.style.display = "none";
+    lossOutput.style.display = "none";
+    squareOutput.style.display = "none";
+    errorOutput.innerText = "Negative values are not accepted";
+  }
+  else if(initialPrice.value && stockQty.value && currentPrice.value){
     if(current > initial){
       profitOutput.style.display = "block";
       lossOutput.style.display = "none";
       squareOutput.style.display = "none";
       errorOutput.style.display = "none";
       var profit = (current - initial)*qty;
-      var profitPercent = (profit/initial)*100;
+      var profitPercent = ((current-initial)/initial)*100;
       profitPercent = Math.round(profitPercent*10)/10;
       profitOutput.innerText = "Hurray! You made money.\n Total Profit: "+profit+"\n Profit Percentage: "+profitPercent+"%";
     }
@@ -31,7 +38,7 @@ function calculateProfitOrLoss(initial, qty, current){
       squareOutput.style.display = "none";
       errorOutput.style.display = "none";
       var loss = (initial - current)*qty;
-      var lossPercent = (loss/initial)*100;
+      var lossPercent = ((current-initial)/initial)*100;
       lossPercent = Math.round(lossPercent*10)/10;
       lossOutput.innerText = "Bad News, you lost money.\n Total Loss: "+loss+"\n Loss Percentage: "+lossPercent+"%";
     }
