@@ -29,7 +29,7 @@ function calculateProfitOrLoss(initial, qty, current){
       errorOutput.style.display = "none";
       var profit = (current - initial)*qty;
       var profitPercent = ((current-initial)/initial)*100;
-      profitPercent = Math.round(profitPercent*10)/10;
+      profitPercent = Math.round(profitPercent*100)/100;
       profitOutput.innerText = "Hurray! You made money.\n Total Profit: "+profit+"\n Profit Percentage: "+profitPercent+"%";
     }
     else if(initial > current){
@@ -39,7 +39,7 @@ function calculateProfitOrLoss(initial, qty, current){
       errorOutput.style.display = "none";
       var loss = (initial - current)*qty;
       var lossPercent = ((current-initial)/initial)*100;
-      lossPercent = Math.round(lossPercent*10)/10;
+      lossPercent = Math.round(lossPercent*100)/100;
       lossOutput.innerText = "Bad News, you lost money.\n Total Loss: "+loss+"\n Loss Percentage: "+lossPercent+"%";
     }
     else{
